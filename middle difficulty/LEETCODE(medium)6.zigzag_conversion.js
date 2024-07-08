@@ -1,4 +1,5 @@
-// The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+// The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:
+//(you may want to display this pattern in a fixed font for better legibility)
 
 // P   A   H   N
 // A P L S I I G
@@ -10,11 +11,10 @@
 // string convert(string s, int numRows);
 
 // Example 1:
-
 // Input: s = "PAYPALISHIRING", numRows = 3
 // Output: "PAHNAPLSIIGYIR"
-// Example 2:
 
+// Example 2:
 // Input: s = "PAYPALISHIRING", numRows = 4
 // Output: "PINALSIGYAHRPI"
 // Explanation:
@@ -30,6 +30,7 @@
  * @param {number} numRows
  * @return {string}
  */
+
 var convert = function (s, numRows) {
     let arr = [];
     for (let i = 0; i < numRows; i++) {
