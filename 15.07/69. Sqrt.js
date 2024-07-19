@@ -17,8 +17,10 @@
 // Explanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.
 var mySqrt = function (x) {
     let beg = 0, end = x, ans = 0;
+    let iter = 0;
 
     while (beg <= end) {
+        iter++;
         let mid = Math.floor((beg + end) / 2);
 
         if (mid * mid > x) {
@@ -30,5 +32,10 @@ var mySqrt = function (x) {
             beg = mid + 1;
         }
     }
+    console.log(iter)
     return ans;
 };
+
+
+mySqrt(100000000)
+
