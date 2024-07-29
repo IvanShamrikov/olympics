@@ -20,10 +20,18 @@
 // Output: 3
 // Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 
-var fib = function (n) {
-    let arr = [0, 1];
-    for (let i = 2; i <= n; i++) {
-        arr[i] = arr[i - 1] + arr[i - 2];
-    }
-    return arr[n]
-};
+// var fib = function (n) {
+//     let arr = [0, 1];
+//     for (let i = 2; i <= n; i++) {
+//         arr[i] = arr[i - 1] + arr[i - 2];
+//     }
+//     return arr[n]
+// };
+
+
+function fib(num, n1, n2) {
+    console.log(n1 + n2);
+    if (num - 1 >= 0) return fib(num - 1, n1 + n2, n1)
+}
+
+fib(10, 1, 1)
