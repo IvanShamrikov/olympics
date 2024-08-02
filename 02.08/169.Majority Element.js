@@ -1,0 +1,42 @@
+// Given an array nums of size n, return the majority element.
+
+// The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+
+
+// Example 1:
+
+// Input: nums = [3,2,3]
+// Output: 3
+// Example 2:
+
+// Input: nums = [2,2,1,1,1,2,2]
+// Output: 2
+
+
+
+var majorityElement = function (nums) {
+    const numbers = {};
+    let max = 0;
+    let majorityNumber = 0;
+    nums.forEach(num => {
+        if (!numbers[num]) {
+            numbers[num] = 1;
+        } else {
+            numbers[num] += 1;
+        }
+        if (numbers[num] > max) {
+            max = numbers[num];
+            majorityNumber = num;
+        }
+    })
+    // let max = 0;
+    // let majorityNumber = 0;
+    // Object.keys(numbers).forEach(key => {
+    //     if ( numbers[key] > max ){
+    //         max = numbers[key];
+    //         majorityNumber = key;
+    //     }
+    // })
+    return majorityNumber
+};
