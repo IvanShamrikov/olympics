@@ -32,6 +32,7 @@ print(fib(3))
 
 #-------------------------------------------
 #Знаходження n-го числа фібоначі РЕКУРСИВНОЮ функцією
+
 counter = 0 #лічильник, який виводить кількість викликів функції
 def fib_rec(number):
     global counter
@@ -63,8 +64,8 @@ def fib_lin(number, counter):
     while number > 0:
         fib_next = fib1 + fib2
         fib1, fib2 = fib2, fib_next
-        number-=1
-        counter +=1
+        number -= 1
+        counter += 1
     return fib2
 
 counter = 0
