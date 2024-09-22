@@ -198,6 +198,16 @@ for i in string:
     string2 += i
     print(string2)
 
+# перевірка на регистр
+x = "AA"
+print(x.isupper())
+print(x.islower())
+
+x = "Aa"
+print(x.isupper())
+print(x.islower())
+
+
 
 # ----------------------------------------
 
