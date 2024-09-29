@@ -1,4 +1,4 @@
- # Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+ # Дано непорожній масив цілих чисел nums, де кожен елемент з'являється двічі, за винятком одного. Знайдіть це єдине число.
  # You must implement a solution with a linear runtime complexity and use only constant extra space.
  #
  # Example 1:

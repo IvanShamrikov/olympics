@@ -50,3 +50,12 @@ def finder(nums):
 nums = [2,2,1,1,1,2,2]
 result = finder(nums)
 print(result)
+
+
+# рішення номер 2
+nums = [2,2,1,1,1,2,2]
+for el in nums:
+    if nums.count(el) > len(nums)/2:
+        print(el)
+        break
+
