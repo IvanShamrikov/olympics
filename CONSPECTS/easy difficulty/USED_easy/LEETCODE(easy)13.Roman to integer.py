@@ -1,8 +1,8 @@
 # Перевод римьских чисел в звичайні і навпаки
 
-# Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+# Римські цифри представлені сімома різними символами: I, V, X, L, C, D та M.
 #
-# Symbol       Value
+# Символ       Значення
 # I             1
 # V             5
 # X             10
@@ -10,14 +10,18 @@
 # C             100
 # D             500
 # M             1000
-# For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
+# Наприклад, 2 пишеться як II у римських цифрах, просто два одиничні додані разом. 12 пишеться як XII, що просто X + II.
+# Число 27 пишеться як XXVII, що є XX + VI + I.
 #
-# Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+# Римські цифри зазвичай пишуться від найбільшої до найменшої зліва направо.
+# Однак, число чотири не пишеться як IIII. Замість цього, число чотири пишеться як IV.
+# Оскільки одиниця стоїть перед п'ятіркою, ми віднімаємо її, утворюючи чотири.
+# Те ж саме стосується числа дев'ять, яке пишеться як IX. Існує шість випадків, коли використовується віднімання:
 #
-# I can be placed before V (5) and X (10) to make 4 and 9.
-# X can be placed before L (50) and C (100) to make 40 and 90.
-# C can be placed before D (500) and M (1000) to make 400 and 900.
-# Given a roman numeral, convert it to an integer.
+# I можна поставити перед V (5) та X (10), щоб отримати 4 і 9.
+# X можна поставити перед L (50) та C (100), щоб отримати 40 і 90.
+# C можна поставити перед D (500) та M (1000), щоб отримати 400 і 900.
+# Задача: перетворити римське число на ціле число.
 #
 # Example 1:
 #

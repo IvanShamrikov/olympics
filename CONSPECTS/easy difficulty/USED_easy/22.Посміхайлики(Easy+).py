@@ -53,7 +53,6 @@ third = second//5
 third_remaining = third%7
 forth = third//7
 
-
 firstSmile = ":-)"
 secondSmile = ";-)"
 thirdSmile = ":-D"
