@@ -1,9 +1,9 @@
  # https://leetcode.com/problems/island-perimeter/description/
- # You are given row x col grid representing a map where grid[i][j] = 1 represents land and grid[i][j] = 0 represents water.
- # Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there
- # is exactly one island (i.e., one or more connected land cells).
- # The island doesn't have "lakes", meaning the water inside isn't connected to the water around the island. One cell is a square
- # with side length 1. The grid is rectangular, width and height don't exceed 100. Determine the perimeter of the island.
+ # Вам дано масив, який представляє карту землі і суші, де grid[i][j] = 1 означає сушу, а grid[i][j] = 0 означає воду.
+ # Клітинки сітки з'єднані горизонтально/вертикально (не по діагоналі). Сітка повністю оточена водою, і є рівно один острів
+ # (тобто одна або більше з'єднаних клітинок суші).
+ # Острів не має "озер", тобто вода всередині не з'єднана з водою навколо острова. Одна клітинка є квадратом зі стороною довжиною 1.
+ # Сітка прямокутна, ширина та висота не перевищують 100. Визначте периметр острова.
  #
  # Example 1:
  # Input: grid = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]

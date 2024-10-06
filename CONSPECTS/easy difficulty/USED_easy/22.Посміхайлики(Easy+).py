@@ -53,8 +53,6 @@ third = second//5
 third_remaining = third%7
 forth = third//7
 
-if N//3:
-    first
 
 firstSmile = ":-)"
 secondSmile = ";-)"
