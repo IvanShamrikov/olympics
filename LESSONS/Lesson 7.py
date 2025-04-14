@@ -68,6 +68,7 @@ print(fourthSmile * forth, thirdSmile * third_remaining, secondSmile * second_re
 
 #------------------------------------------------------
 
+# REMOVE DUPLICATES
 
 # Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.
 # The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
@@ -101,30 +102,6 @@ print(fourthSmile * forth, thirdSmile * third_remaining, secondSmile * second_re
 # Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 # It does not matter what you leave beyond the returned k (hence they are underscores).
 
-# var removeDuplicates = function (ar) {
-#     // const arr = [];
-#     // for(let i = 0; i < nums.length; i++){
-#     //     if(!arr.includes(nums[i])){
-#     //         arr.push(nums[i]);
-#     //     }else{
-#     //         nums.splice(i, 1);
-#     //         i--;
-#     //     }
-#     // }
-#     // return nums.length
-#
-#     let n = ar.length;
-#     let i = 0, k = 0;
-#
-#     for (let i = 0; i < n; i++) {
-#         if (ar[i] > ar[k])
-#             ar[++k] = ar[i];
-#     }
-#
-#     return k + 1;
-# };
-
-
 
 nums = [0,0,1,1,1,2,2,3,3,4]
 
@@ -154,6 +131,8 @@ print("Обрізаний масив тільки з унікальними чи
 
 
 #------------------------------------------------------
+
+#HAPPY NUMBER
 
 # Write an algorithm to determine if a number n is happy.
 #
