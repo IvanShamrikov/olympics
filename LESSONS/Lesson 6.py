@@ -49,7 +49,7 @@ print(counter)
 # У трикутнику Паскаля кожне число є сумою двох чисел безпосередньо над ним, як показано:
 # https://drive.google.com/file/d/1d9SP8Zhqrfr6LXGH3QMv74zpzAvaIXIN/view?usp=sharing
 # https://drive.google.com/file/d/1V-rZvk3_yiiQeRr3Nypkp9QewpzJz5E5/view?usp=sharing
-# https://drive.google.com/file/d/1ppa478oX_Uz6E9oCCyR28MuKmfYpgB0u/view?usp=sharing
+# https://drive.google.com/file/d/1vd_c0nhqyd_i4H0liwxCdFvOcUKJZ2MC/view?usp=sharing
 
  # Example 1:
  # Input: numRows = 5

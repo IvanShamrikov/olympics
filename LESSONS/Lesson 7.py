@@ -1,6 +1,6 @@
 #------------------------------------------------------
 
-
+# https://uoi.eolymp.space/problems/22
 # Посміхайлики
 #
 # Під час олімпіади з програмування журі та оргкомітет полюбляють спостерігати за перебігом подій.
@@ -41,58 +41,67 @@
 #
 # Виведіть, що буде намальовано на дошці голови журі після того, як буде здано N-те правильне рішення
 
+#
+# N = int(input("N = "))
+# first = 0
+# second = 0
+# third = 0
+# fourth = 0
+#
+# first = N
+# first_remaining = N%3
+# second = first//3
+# second_remaining = second%5
+# third = second//5
+# third_remaining = third%7
+# forth = third//7
+#
+# firstSmile = ":-)"
+# secondSmile = ";-)"
+# thirdSmile = ":-D"
+# fourthSmile = ";-D"
+# print(fourthSmile * forth, thirdSmile * third_remaining, secondSmile * second_remaining, firstSmile * first_remaining)
 
-N = int(input("N = "))
-first = 0
-second = 0
-third = 0
-fourth = 0
 
-first = N
-first_remaining = N%3
-second = first//3
-second_remaining = second%5
-third = second//5
-third_remaining = third%7
-forth = third//7
+n = int(input())
+smiles = ["", "", "", ""]
+res = []
+text = ""
+for i in [105, 15, 3, 1]:
+    res.append(n // i)
+    n = n % i
 
-firstSmile = ":-)"
-secondSmile = ";-)"
-thirdSmile = ":-D"
-fourthSmile = ";-D"
-
-
-print(fourthSmile * forth, thirdSmile * third_remaining, secondSmile * second_remaining, firstSmile * first_remaining)
-
+for i in range(4):
+    text += smiles[i] * res[i]
+print(text)
 
 
 #------------------------------------------------------
 
-# REMOVE DUPLICATES
-
-# Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.
-# The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
-# Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
-#
-# Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
-# Return k.
-# Custom Judge:
-#
-# The judge will test your solution with the following code:
-# int[] nums = [...]; // Input array
-# int[] expectedNums = [...]; // The expected answer with correct length
-# int k = removeDuplicates(nums); // Calls your implementation
+# ВИДАЛЕННЯ ДУБЛІКАТІВ
+# Дано масив цілих чисел nums, відсортований у неспадному порядку. Видаліть дублікати на місці (in-place) так, щоб
+# кожен унікальний елемент з'являвся лише один раз.
+# Відносний порядок елементів має залишатися незмінним. Потім поверніть кількість унікальних елементів у nums.
+# Вважайте кількість унікальних елементів у nums рівною k. Щоб пройти перевірку, вам потрібно виконати такі дії:
+# Змініть масив nums так, щоб перші k елементів масиву містили унікальні елементи в тому порядку, в якому вони спочатку
+# були присутні в nums. Решта елементів nums не мають значення, як і розмір nums.
+# Поверніть k.
+# Користувацьке тестування (Custom Judge):
+# Система перевірки протестує ваше рішення за допомогою такого коду:
+# int[] nums = [...]; // Вхідний масив
+# int[] expectedNums = [...]; // Очікувана відповідь із правильною довжиною
+# int k = removeDuplicates(nums); // Викликає вашу реалізацію
 # assert k == expectedNums.length;
 # for (int i = 0; i < k; i++) {
 # assert nums[i] == expectedNums[i];
 # }
-# If all assertions pass, then your solution will be accepted.
+# Якщо всі перевірки (assert) проходять успішно, ваше рішення буде зараховано.
 #
 #
 #
 # Example 1:
-# Input: nums = [1,1,2]
-# Output: 2, nums = [1,2,_]
+# Input: nums = [1,1,2,2]
+# Output: 2, nums = [1,2,_,_]
 # Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
 # It does not matter what you leave beyond the returned k (hence they are underscores).
 
@@ -132,15 +141,15 @@ print("Обрізаний масив тільки з унікальними чи
 
 #------------------------------------------------------
 
-#HAPPY NUMBER
+#ЩАСЛИВЕ ЧИСЛО
 
-# Write an algorithm to determine if a number n is happy.
-#
-# A happy number is a number defined by the following process:
-# Starting with any positive integer, replace the number by the sum of the squares of its digits.
-# Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
-# Those numbers for which this process ends in 1 are happy.
-# Return true if n is a happy number, and false if not.
+# Напишіть алгоритм, щоб визначити, чи є число n щасливим.
+# Щасливе число — це число, визначене за допомогою такого процесу:
+# Починаючи з будь-якого додатного цілого числа, замініть число сумою квадратів його цифр.
+# Повторюйте цей процес, доки число не дорівнюватиме 1 (де воно й залишиться), або воно не почне нескінченно циклічно
+# повторюватися в петлі, яка не містить 1.
+# Ті числа, для яких цей процес закінчується одиницею, є щасливими.
+# Поверніть true, якщо n є щасливим числом, і false в іншому випадку.
 #
 #
 #
@@ -185,3 +194,150 @@ while True:
             print(f"Це число не дорівнює 1. Тобто початкове число не було щасливим.")
             print(False)
         break
+
+
+#-------------------------------------------------------
+# https://uoi.eolymp.space/en/problems/23
+
+# Коригування масивів
+#
+# Голова журі олімпіади згенерував декілька числових масивів, які будуть вхідними даними для цікавої задачі.
+# Але ці масиви йому не подобаються, тому що вони не відсортовані!
+# Сортувати ці масиви голова журі не хоче.
+# Єдине що він збирається робити − трішки відкоригувати масиви, змінюючи знаки у деяких.
+# Іншими словами, можна робити дуже просту операцію: деякі елементи a[i] замінити на −a[i].
+#
+# Напишіть програму, яка з'ясує, чи зможе голова журі за допомогою описаної операції зробити масив відсортованим за
+# неспаданням.
+#
+# Input
+# У першому рядку вхідних даних дано ціле число N − кількість елементів у масиві (1≤N≤100000).
+# У наступному рядку дано n цілих чисел a[i] − масив, який голова журі олімпіади хоче зробити відсортованим за
+# неспаданням (|a| <= 100000).
+#
+# Output
+# Якщо не можна замінити деякі елементи a[i] на −a[i], так щоб масив став відсортованим за неспаданням, виведіть «NO».
+# Інакше, у першому рядку виведіть «YES». У другому рядку виведіть N чисел b[i] − масив, для всіх елементів якого виконується:
+# b[i] ≤ b[i+1];
+# b[i] = a[i] або b[i] = -a[i]
+#
+# Examples
+#
+# Input #1
+# 5
+# 1 -1 -2 3 6
+# Answer #1
+# YES
+# -1 -1 2 3 6
+#
+# Input #2
+# 3
+# 1 1 0
+# Answer #2
+# YES
+# -1 -1 0
+
+n = int(input())
+m = list(map(int, input().split()))
+
+m[0] = -abs(m[0]) #міняємо перший елемен на негативний, щоб дати собі трохи запасу
+
+sort = True
+for i in range(n-1):
+    current = m[i]
+    next_pos = abs(m[i+1])
+    next_neg = -abs(m[i+1])
+    if current <= next_neg:
+        m[i + 1] = next_neg
+    elif current <= next_pos:
+        m[i + 1] = next_pos
+    else:
+        sort = False
+if sort:
+    print("YES")
+    for el in m: print(el, end=" ")
+else:
+    print("NO")
+
+
+#----------------------------------------------
+# Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given
+ # target value.
+ # If target is not found in the array, return [-1, -1].
+ # You must write an algorithm with O(log n) runtime complexity.
+ #
+ # Example 1:
+ # Input: nums = [5,7,7,8,8,10], target = 8
+ # Output: [3,4]
+ #
+ # Example 2:
+ # Input: nums = [5,7,7,8,8,10], target = 6
+ # Output: [-1,-1]
+ #
+ # Example 3:
+ # Input: nums = [], target = 0
+ # Output: [-1,-1]
+
+nums = [5,7,7,8,8,10]
+target = 8
+print(f"Маємо масив {nums}, шукаємо індекси початку і кінця входження числа {target}")
+def finder(nums, target):
+    left = 0
+    right = len(nums) - 1
+
+    start = None
+    end = None
+
+
+    if len(nums) == 0:
+        print("Початковий масив пустий, відповідь задачі:", end = " ")
+        return [-1,-1]
+    if len(nums) == 1:
+        if nums[0] == target:
+            print(f"Початковий масив містить 1 число і це наше число {target}, відповідь задачі:", end=" ")
+            return [0,0]
+        else:
+            print(f"Початковий масив містить 1 число і це не наше число {target}, відповідь задачі:", end=" ")
+            return [-1, -1]
+
+    while left <= right:
+        center = round((left + right) / 2)
+        print(f"Шукаю індекс посередині між {left} та {right} = {center} в масиві {nums}. Там стоїть число {nums[center]}")
+        if nums[center] == target:
+            print(f"За індексом {center} ми знайшли шукане число {target}. тепер треба знайти індекси початку і кінця входження цього числа в масиві")
+            start = center
+            end = center
+
+            while nums[start] == target:
+                print(f"Ідемо ліворуч від індекса {start}. там стоїть число {nums[start]}.")
+                start -= 1
+                if start < 0 or nums[start] != target:
+                    print(f"Ми закінчили пошук, самий лівий індекс числа {target} був індексом {start+1}")
+                    start += 1
+                    break
+
+            while nums[end] == target:
+                print(f"Ідемо праворуч від індекса {end}. там стоїть число {nums[end]}.")
+                end += 1
+                if end >= len(nums) or nums[end] != target:
+                    print(f"Ми закінчили пошук, самий правий індекс числа {target} був індексом {end + 1}")
+                    end -= 1
+                    break
+
+            break
+
+        elif nums[center] > target:
+            print(f"Число за індексом {center} ({nums[center]}) більше за наше шукане {target}. Беремо ліву частину масива і шукаємо далі.")
+            right = center - 1
+        elif nums[center] < target:
+            print(f"Число за індексом {center} ({nums[center]}) меньше за наше шукане {target}. Беремо праву частину масива і шукаємо далі.")
+            left = center + 1
+
+    if start != None and end != None:
+        print("Ми знайшли число та його індекси входження. Відповідь: ", end = "")
+        return [start, end]
+    else:
+        print("Ми не знайшли число в масиві. Відповідь: ", end = "")
+        return [-1, -1]
+
+print(finder(nums, target))
